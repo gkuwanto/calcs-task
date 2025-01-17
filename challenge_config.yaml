@@ -36,7 +36,8 @@ leaderboard:
 challenge_phases:
   - id: 1
     name: Development Phase
-    description: Development phase for the challenge
+    description: templates/challenge_phase_1_description.html
+    codename: dev
     start_date: 2025-01-17 00:00:00
     end_date: 2025-02-14 23:59:59
     max_submissions_per_day: 5
@@ -45,13 +46,16 @@ challenge_phases:
     is_submission_public: true
     submission_meta_attributes:
       - name: method_name
+        description: Name of the method used
+        type: text
         is_required: true
-    allowed_submission_file_types: [".csv"]
+    allowed_submission_file_types: csv
     test_annotation_file: annotations/dev_phase_ground_truth.csv
 
   - id: 2
     name: Testing Phase
-    description: Final testing phase for the challenge
+    description: templates/challenge_phase_2_description.html
+    codename: test
     start_date: 2025-02-15 00:00:00
     end_date: 2025-02-15 23:59:59
     max_submissions_per_day: 1
@@ -60,8 +64,10 @@ challenge_phases:
     is_submission_public: false
     submission_meta_attributes:
       - name: method_name
+        description: Name of the method used
+        type: text
         is_required: true
-    allowed_submission_file_types: [".csv"]
+    allowed_submission_file_types: csv
     test_annotation_file: annotations/test_phase_ground_truth.csv
 
 dataset_splits:
@@ -74,20 +80,20 @@ dataset_splits:
 
 challenge_phase_splits:
   - challenge_phase_id: 1
-    leaderboard_id: 1
     dataset_split_id: 1
+    leaderboard_id: 1
     visibility: 1
     leaderboard_decimal_precision: 2
     is_leaderboard_order_descending: True
   - challenge_phase_id: 2
-    leaderboard_id: 1
     dataset_split_id: 1
+    leaderboard_id: 1
     visibility: 3
     leaderboard_decimal_precision: 2
     is_leaderboard_order_descending: True
   - challenge_phase_id: 2
-    leaderboard_id: 1
     dataset_split_id: 2
+    leaderboard_id: 1
     visibility: 1
     leaderboard_decimal_precision: 2
     is_leaderboard_order_descending: True
