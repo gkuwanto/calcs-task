@@ -1,1 +1,21 @@
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+<h2>Evaluation Criteria</h2>
+
+<h3>Metric</h3>
+<p>Systems will be evaluated based on their accuracy in predicting human preferences for CS text. This will be measured by comparing the system's ranking of generated sentences (Sent 1 vs. Sent 2) with human annotations in the CSPref dataset.</p>
+
+<h3>Dataset Structure</h3>
+<p>The CSPref dataset contains:</p>
+<ul>
+    <li><strong>Original L1:</strong> English sentences</li>
+    <li><strong>Original L2:</strong> Hindi, Tamil, or Malayalam sentences</li>
+    <li><strong>Sent 1, Sent 2:</strong> Two different CS generations based on the original sentences</li>
+    <li><strong>Chosen:</strong> Human annotation indicating the preferred sentence (Sent 1, Sent 2, or Tie)</li>
+    <li><strong>Lang:</strong> Language pair</li>
+</ul>
+
+<h3>Evaluation Process</h3>
+<ol>
+    <li>Public leaderboard evaluation based on English-Hindi, English-Tamil, and English-Malayalam language pairs</li>
+    <li>Private leaderboard evaluation on unseen language pairs (English-Indonesian, Indonesian-Javanese, Singlish) to assess generalization ability</li>
+    <li>Final ranking will be determined by the weighted average of performances across all language pairs</li>
+</ol>
